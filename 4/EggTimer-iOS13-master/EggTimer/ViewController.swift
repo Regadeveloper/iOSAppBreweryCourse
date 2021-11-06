@@ -10,18 +10,22 @@ import UIKit
 
 class ViewController: UIViewController {
 
-    enum eggType: Int {
+    /* enum eggType: Int {
         case soft = 5
         case medium = 7
         case hard = 12
-    }
+    } */
+
+    let eggTimes = ["Soft" : 5, "Medium" : 7, "Hard" : 12]
     
     @IBAction func hardnessSelected (sender: UIButton) {
-        let hardness = sender.currentTitle ?? "no tiene nombre"
+        guard let hardness = sender.currentTitle else {return}
+        guard let timeNeeded = eggTimes[hardness] else {return}
+        print(timeNeeded)
 
-        switch hardness {
+        /* switch hardness {
         case "Soft":
-            print(eggType.soft.rawValue)
+            print(eggTimes.soft.rawValue)
             break
         case "Medium":
             print(eggType.medium.rawValue)
@@ -32,7 +36,7 @@ class ViewController: UIViewController {
         default:
             print("Invalid option")
             break
-        }
+        } */
 
     }
 
