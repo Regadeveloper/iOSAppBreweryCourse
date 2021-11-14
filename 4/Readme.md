@@ -1,0 +1,1 @@
+This exercise is about timers, optionals and a basic algorithm to show a progress bar
